@@ -1,4 +1,5 @@
 import 'package:bpad_app/app/application/employee/employee_bloc.dart';
+import 'package:bpad_app/app/application/vehicle/vehicle_bloc.dart';
 import 'package:bpad_app/app/presentation/constants/dimens.dart';
 import 'package:bpad_app/app/presentation/constants/text_style.dart';
 import 'package:bpad_app/app/presentation/helpers/failure_helper.dart';
@@ -14,9 +15,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class SubmitEmployeePage extends StatelessWidget {
-  final int? id;
-  const SubmitEmployeePage({
+class SubmitVehiclePage extends StatelessWidget {
+  final String? id;
+
+  const SubmitVehiclePage({
     this.id,
     super.key,
   });
@@ -24,26 +26,26 @@ class SubmitEmployeePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<EmployeeBloc>()..add(const EmployeeEvent.getData()),
-      child: _SubmitEmployeeBodyPage(
+      create: (context) => getIt<VehicleBloc>(),
+      child: SubmitVehicleBodyPage(
         id: id,
       ),
     );
   }
 }
 
-class _SubmitEmployeeBodyPage extends StatelessWidget {
-  final int? id;
-  const _SubmitEmployeeBodyPage({
+class SubmitVehicleBodyPage extends StatelessWidget {
+  final String? id;
+  const SubmitVehicleBodyPage({
     this.id,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final bloc = context.read<EmployeeBloc>();
+    final bloc = context.read<VehicleBloc>();
     I10n i10n = I10n.of(context);
-    return BlocConsumer<EmployeeBloc, EmployeeState>(
+    return BlocConsumer<VehicleBloc, VehicleState>(
       listener: (context, state) {
         state.failureOrSuccessOption.fold(
           () {},
@@ -94,7 +96,7 @@ class _SubmitEmployeeBodyPage extends StatelessWidget {
               ),
             ),
             title: Text(
-              id == null ? 'Add Data ASN' : 'Edit Data ASN',
+              id == null ? 'Add Data Vehicle' : 'Edit Data Vehicle',
               style: cTextBoldXL,
             ),
           ),
@@ -102,34 +104,44 @@ class _SubmitEmployeeBodyPage extends StatelessWidget {
             padding: padding(horizontal: 16, vertical: 12),
             children: [
               PrimaryTextField(
-                onChanged: (val) => bloc.add(EmployeeEvent.nameChanged(val)),
+                onChanged: (val) => bloc.add(VehicleEvent.noChanged(val)),
                 keyboardType: TextInputType.text,
-                hintText: 'Nama',
+                hintText: 'No Pol',
                 textInputAction: TextInputAction.next,
                 inputFormatters: [
                   FilteringTextInputFormatter.singleLineFormatter,
                 ],
               ),
               PrimaryTextField(
-                onChanged: (val) => bloc.add(EmployeeEvent.nipChanged(val)),
+                onChanged: (val) => bloc.add(VehicleEvent.kindChanged(val)),
                 keyboardType: TextInputType.text,
-                hintText: 'NIP',
+                hintText: 'Jenis Roda',
                 textInputAction: TextInputAction.next,
                 inputFormatters: [
                   FilteringTextInputFormatter.singleLineFormatter,
                 ],
               ),
               PrimaryTextField(
-                onChanged: (val) => bloc.add(EmployeeEvent.positionChanged(val)),
+                onChanged: (val) => bloc.add(VehicleEvent.brandChanged(val)),
                 keyboardType: TextInputType.text,
-                hintText: 'Posisi',
+                hintText: 'Merk',
+                textInputAction: TextInputAction.next,
+                inputFormatters: [
+                  FilteringTextInputFormatter.singleLineFormatter,
+                ],
+              ),
+
+              PrimaryTextField(
+                onChanged: (val) => bloc.add(VehicleEvent.typeChanged(val)),
+                keyboardType: TextInputType.text,
+                hintText: 'Type',
                 textInputAction: TextInputAction.next,
                 inputFormatters: [
                   FilteringTextInputFormatter.singleLineFormatter,
                 ],
               ),
               // PrimaryTextField(
-              //   onChanged: (val) => bloc.add(EmployeeEvent.salaryChanged(val)),
+              //   onChanged: (val) => bloc.add(VehicleEvent.salaryChanged(val)),
               //   keyboardType: TextInputType.text,
               //   hintText: 'Gaji',
               //   textInputAction: TextInputAction.next,
@@ -137,59 +149,13 @@ class _SubmitEmployeeBodyPage extends StatelessWidget {
               //     FilteringTextInputFormatter.singleLineFormatter,
               //     FilteringTextInputFormatter.digitsOnly,
               //   ],
-              // ),
-              PrimaryCustomizedOnTapField(
-                onPressed: () async {
-                  DateTime? date = await showDatePicker(
-                    builder: (context, child) {
-                      return Theme(
-                        data: Theme.of(context).copyWith(
-                          colorScheme: const ColorScheme.light(
-                            primary: Colors.blue,
-                            onPrimary: Colors.white,
-                            onSurface: Colors.black,
-                          ),
-                          textButtonTheme: TextButtonThemeData(
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.blue,
-                            ),
-                          ),
-                        ),
-                        child: child!,
-                      );
-                    },
-                    context: context,
-                    initialDate: state.joinDateFieldValue ?? DateTime(2020, 1),
-                    firstDate: DateTime(1900, 1),
-                    lastDate: DateTime.now(),
-                  );
-                  if (date is DateTime) {
-                    bloc.add(EmployeeEvent.dateJoinedChanged(date));
-                  }
-                },
-                hintText: 'Tanggal bergabung',
-                prefixIcon: Icon(
-                  Icons.calendar_month,
-                  size: 22,
-                  // color: themeData.colorScheme.onBackground.withOpacity(0.7),
-                ),
-                value: state.joinDateFieldValueToString,
-              ),
-              PrimaryDropdownField(
-                hintText: 'Instansi',
-                icon: const Icon(
-                  Icons.account_balance_outlined,
-                  size: 22,
-                ),
-                value: state.instansiFormValue,
-                items: state.instansiList,
-                onChanged: (val) => bloc.add(EmployeeEvent.instansiChanged(val!)),
-              ),
+              // ),nged: (val) => bloc.add(VehicleEvent.instansiChanged(val!)),
+
               gapH16,
               PrimaryButton(
                   onPressed: state.enableButton
                       ? () {
-                          bloc.add(const EmployeeEvent.submit());
+                          bloc.add(const VehicleEvent.submit());
                         }
                       : null,
                   text: 'Submit'),

@@ -9,4 +9,5 @@ abstract class IEmployeeRepository {
   Future<Either<AppFailure, List<Employee>>> getEmployees();
   Future<Either<AppFailure, EmployeeSuccess>> submit(EmployeeForm form);
   Future<Either<AppFailure, List<DropdownText>>> getListInstansi();
+  Future<Either<AppFailure, EmployeeSuccess>> deleteEmployee(String id);
 }

@@ -1,5 +1,4 @@
 import 'package:bpad_app/app/domain/dropdown_text/dropdown_text.dart';
-import 'package:bpad_app/app/domain/instansi/instansi.dart';
 import 'package:bpad_app/app/infrastructure/instansi/instansi_remote_data_source.dart';
 import 'package:dartz/dartz.dart';
 import 'package:bpad_app/app/domain/employee/employee.dart';
@@ -53,6 +52,16 @@ class EmployeeRepository implements IEmployeeRepository {
             )
             .toList(),
       );
+    } catch (e, stack) {
+      return left(dynamicErrorToFailure(e, stack));
+    }
+  }
+
+  @override
+  Future<Either<AppFailure, EmployeeSuccess>> deleteEmployee(String id) async {
+    try {
+      await _employeeRemoteDataSource.deleteEmployee(id: id);
+      return right(const EmployeeSuccess.successDelete());
     } catch (e, stack) {
       return left(dynamicErrorToFailure(e, stack));
     }

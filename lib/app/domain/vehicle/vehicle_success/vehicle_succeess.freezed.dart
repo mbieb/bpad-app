@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'instansi_success.dart';
+part of 'vehicle_succeess.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$InstansiSuccess {
+mixin _$VehicleSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() success,
@@ -57,16 +57,16 @@ mixin _$InstansiSuccess {
 }
 
 /// @nodoc
-abstract class $InstansiSuccessCopyWith<$Res> {
-  factory $InstansiSuccessCopyWith(
-          InstansiSuccess value, $Res Function(InstansiSuccess) then) =
-      _$InstansiSuccessCopyWithImpl<$Res, InstansiSuccess>;
+abstract class $VehicleSuccessCopyWith<$Res> {
+  factory $VehicleSuccessCopyWith(
+          VehicleSuccess value, $Res Function(VehicleSuccess) then) =
+      _$VehicleSuccessCopyWithImpl<$Res, VehicleSuccess>;
 }
 
 /// @nodoc
-class _$InstansiSuccessCopyWithImpl<$Res, $Val extends InstansiSuccess>
-    implements $InstansiSuccessCopyWith<$Res> {
-  _$InstansiSuccessCopyWithImpl(this._value, this._then);
+class _$VehicleSuccessCopyWithImpl<$Res, $Val extends VehicleSuccess>
+    implements $VehicleSuccessCopyWith<$Res> {
+  _$VehicleSuccessCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +83,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$InstansiSuccessCopyWithImpl<$Res, _$SuccessImpl>
+    extends _$VehicleSuccessCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
@@ -97,7 +97,7 @@ class _$SuccessImpl implements _Success {
 
   @override
   String toString() {
-    return 'InstansiSuccess.success()';
+    return 'VehicleSuccess.success()';
   }
 
   @override
@@ -172,7 +172,7 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements InstansiSuccess {
+abstract class _Success implements VehicleSuccess {
   const factory _Success() = _$SuccessImpl;
 }
 
@@ -185,7 +185,7 @@ abstract class _$$SuccessDeleteImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SuccessDeleteImplCopyWithImpl<$Res>
-    extends _$InstansiSuccessCopyWithImpl<$Res, _$SuccessDeleteImpl>
+    extends _$VehicleSuccessCopyWithImpl<$Res, _$SuccessDeleteImpl>
     implements _$$SuccessDeleteImplCopyWith<$Res> {
   __$$SuccessDeleteImplCopyWithImpl(
       _$SuccessDeleteImpl _value, $Res Function(_$SuccessDeleteImpl) _then)
@@ -199,7 +199,7 @@ class _$SuccessDeleteImpl implements _SuccessDelete {
 
   @override
   String toString() {
-    return 'InstansiSuccess.successDelete()';
+    return 'VehicleSuccess.successDelete()';
   }
 
   @override
@@ -274,6 +274,6 @@ class _$SuccessDeleteImpl implements _SuccessDelete {
   }
 }
 
-abstract class _SuccessDelete implements InstansiSuccess {
+abstract class _SuccessDelete implements VehicleSuccess {
   const factory _SuccessDelete() = _$SuccessDeleteImpl;
 }

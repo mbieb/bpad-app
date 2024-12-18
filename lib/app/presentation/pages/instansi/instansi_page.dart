@@ -80,12 +80,22 @@ class InstansiBodyPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              item.name ?? '',
-                              style: cTextReg,
+                            Expanded(
+                              child: Text(
+                                item.name ?? '',
+                                style: cTextBold,
+                              ),
                             ),
                             gapW12,
-                            const Icon(Icons.edit),
+                            const Icon(
+                              Icons.edit,
+                              color: Colors.blue,
+                            ),
+                            gapW16,
+                            const Icon(
+                              Icons.delete,
+                              color: Colors.red,
+                            ),
                           ],
                         ),
                         gapH4,

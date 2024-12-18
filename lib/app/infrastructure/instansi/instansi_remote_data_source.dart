@@ -49,4 +49,12 @@ class InstansiRemoteDataSource {
       'name': name,
     });
   }
+
+  Future deleteInstansi({
+    required String id,
+  }) async {
+    final collection = FirebaseFirestore.instance.collection('instansi').doc(id);
+
+    await collection.delete();
+  }
 }

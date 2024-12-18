@@ -35,4 +35,14 @@ class InstansiRepository implements IInstansiRepository {
       return left(dynamicErrorToFailure(e, stack));
     }
   }
+
+  @override
+  Future<Either<AppFailure, InstansiSuccess>> deleteInstansi(String instansiId) async {
+    try {
+      await _instansiRemoteDataSource.deleteInstansi(id: instansiId);
+      return right(const InstansiSuccess.successDelete());
+    } catch (e, stack) {
+      return left(dynamicErrorToFailure(e, stack));
+    }
+  }
 }

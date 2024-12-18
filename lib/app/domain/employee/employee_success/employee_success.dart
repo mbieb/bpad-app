@@ -5,4 +5,5 @@ part 'employee_success.freezed.dart';
 @freezed
 class EmployeeSuccess with _$EmployeeSuccess {
   const factory EmployeeSuccess.success() = _Success;
+  const factory EmployeeSuccess.successDelete() = _SuccessDelete;
 }

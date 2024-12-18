@@ -1,7 +1,9 @@
 import 'package:bpad_app/app/application/auth/auth_bloc.dart';
 import 'package:bpad_app/app/application/employee/employee_bloc.dart';
 import 'package:bpad_app/app/presentation/constants/dimens.dart';
+import 'package:bpad_app/app/presentation/helpers/failure_helper.dart';
 import 'package:bpad_app/app/presentation/router.dart';
+import 'package:bpad_app/app/presentation/widgets/alert.dart';
 import 'package:bpad_app/app/presentation/widgets/button/primary_button.dart';
 import 'package:bpad_app/config/injection.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,54 @@ class EmployeeBodyPage extends StatelessWidget {
     I10n i10n = I10n.of(context);
     final user = context.read<AuthBloc>().state.user;
     return BlocConsumer<EmployeeBloc, EmployeeState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        state.failureOrSuccessOption.fold(
+          () {},
+          (either) {
+            either.fold(
+              (failure) => failure.maybeWhen(
+                orElse: () => appFailureHandler(failure, context),
+                handled: (handled) => handled.maybeWhen(
+                  orElse: () {},
+                  cancelled: () {
+                    context.pop(true);
+                  },
+                  error: (message) {
+                    Alert.notify(context, i10n.alertWarning, message);
+                  },
+                ),
+              ),
+              (success) {
+                success.maybeWhen(
+                  orElse: () {},
+                  success: () {
+                    // Alert.notifyAction(
+                    //   context,
+                    //   i10n.alertSuccess,
+                    //   'Success Submit Data!',
+                    //   positiveAction: () {
+                    //     context.pop(true);
+                    //   },
+                    // );
+                  },
+                  successDelete: () {
+                    Alert.notifyAction(
+                      context,
+                      i10n.alertSuccess,
+                      'Success Delete Data!',
+                      positiveAction: () {
+                        context.read<EmployeeBloc>().add(
+                              EmployeeEvent.started(),
+                            );
+                      },
+                    );
+                  },
+                );
+              },
+            );
+          },
+        );
+      },
       builder: (context, state) {
         return AppScaffold(
           isLoading: state.isLoading,
@@ -82,20 +131,52 @@ class EmployeeBodyPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               item.name ?? '',
-                              style: cTextReg,
+                              style: cTextBold,
                             ),
                             gapW16,
                             Expanded(
                               child: Text(
-                                item.position ?? '',
+                                item.nip ?? '',
                                 style: cTextReg,
                               ),
                             ),
                             gapW12,
-                            const Icon(Icons.edit),
+                            Expanded(
+                              flex: 2,
+                              child: Text(
+                                item.instansiName ?? '',
+                                style: cTextReg,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            gapW12,
+                            const Icon(
+                              Icons.edit,
+                              color: Colors.blue,
+                            ),
+                            gapW12,
+                            GestureDetector(
+                              onTap: () {
+                                Alert.option(
+                                  context: context,
+                                  positiveAction: () {
+                                    context.read<EmployeeBloc>().add(
+                                          EmployeeEvent.deleteEmployee(item.id ?? ''),
+                                        );
+                                  },
+                                  title: 'Warning',
+                                  body: 'Delete Data?',
+                                );
+                              },
+                              child: const Icon(
+                                Icons.delete,
+                                color: Colors.red,
+                              ),
+                            ),
                           ],
                         ),
                         gapH4,

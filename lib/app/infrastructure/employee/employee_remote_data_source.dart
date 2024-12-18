@@ -20,6 +20,8 @@ class EmployeeRemoteDataSource {
         'name': data['name'],
         'position': data['position'],
         'nip': data['nip'],
+        'instansiId': data['instansiId'],
+        'instansiName': data['instansiName'],
         'joinDate': (data['joinDate'] as Timestamp).toDate().toIso8601String(),
       });
     }).toList();
@@ -61,5 +63,13 @@ class EmployeeRemoteDataSource {
       'instansiName': instansiName,
       'joinDate': joinDate,
     });
+  }
+
+  Future deleteEmployee({
+    required String id,
+  }) async {
+    final collection = FirebaseFirestore.instance.collection('employees').doc(id);
+
+    await collection.delete();
   }
 }

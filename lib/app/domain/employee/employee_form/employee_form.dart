@@ -32,7 +32,7 @@ class EmployeeForm with _$EmployeeForm {
     return failureOrName
         .andThen(failureOrNip)
         .andThen(failureOrPosition)
-        .andThen(failureOrSalary)
+        // .andThen(failureOrSalary)
         .andThen(failureOrJoinDate)
         .andThen(failureOrInstansi)
         .fold((f) => some(f), (_) => none());

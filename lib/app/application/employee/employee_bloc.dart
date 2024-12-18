@@ -54,13 +54,7 @@ class EmployeeBloc extends Bloc<EmployeeEvent, EmployeeState> {
       started: (event) async {
         emit(state.loading);
         final failureOrUser = await _employeeRepository.getEmployees();
-        final failureOrListInstansi = await _employeeRepository.getListInstansi();
 
-        failureOrListInstansi.fold((val) {}, (val) {
-          emit(state.unmodified.copyWith(
-            instansiListOption: some(val),
-          ));
-        });
         failureOrUser.fold((val) {}, (val) {
           emit(state.unmodified.copyWith(
             employeeListOption: some(val),
@@ -80,7 +74,7 @@ class EmployeeBloc extends Bloc<EmployeeEvent, EmployeeState> {
       nipChanged: (event) async {
         emit(
           state.unmodified.copyWith.form(
-            name: some(event.nip),
+            nip: some(event.nip),
           ),
         );
       },
@@ -124,6 +118,14 @@ class EmployeeBloc extends Bloc<EmployeeEvent, EmployeeState> {
           final response = await _employeeRepository.submit(state.form);
           failureOrSuccessOption = some(response);
         }
+        emit(state.unmodified.copyWith(failureOrSuccessOption: failureOrSuccessOption));
+      },
+      deleteEmployee: (event) async {
+        emit(state.loading);
+        Option<Either<AppFailure, EmployeeSuccess>> failureOrSuccessOption = none();
+        final response = await _employeeRepository.deleteEmployee(event.id);
+        failureOrSuccessOption = some(response);
+
         emit(state.unmodified.copyWith(failureOrSuccessOption: failureOrSuccessOption));
       },
     );

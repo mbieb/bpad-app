@@ -10,5 +10,6 @@ class EmployeeEvent with _$EmployeeEvent {
   const factory EmployeeEvent.salaryChanged(String salary) = _SalaryChanged;
   const factory EmployeeEvent.dateJoinedChanged(DateTime date) = _dateJoinChanged;
   const factory EmployeeEvent.submit() = _Submit;
+  const factory EmployeeEvent.deleteEmployee(String id) = _DeleteEmployee;
   const factory EmployeeEvent.instansiChanged(DropdownText instansi) = _InstansiChanged;
 }

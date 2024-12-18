@@ -7,6 +7,7 @@ import 'package:bpad_app/app/presentation/pages/profile/profile_page.dart';
 import 'package:bpad_app/app/presentation/pages/register/register_page.dart';
 import 'package:bpad_app/app/presentation/pages/sign_in/sign_in_page.dart';
 import 'package:bpad_app/app/presentation/pages/splash_screen/splash_screen.dart';
+import 'package:bpad_app/app/presentation/pages/vehicle/submit_vehicle_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
@@ -68,7 +69,7 @@ class AppRouter {
       ),
       GoRoute(
         path: submitVehicle,
-        builder: (context, state) => Container(),
+        builder: (context, state) => const SubmitVehiclePage(),
       ),
     ],
   );

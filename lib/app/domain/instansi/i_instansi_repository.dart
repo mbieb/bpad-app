@@ -7,4 +7,5 @@ import 'package:dartz/dartz.dart';
 abstract class IInstansiRepository {
   Future<Either<AppFailure, List<Instansi>>> getListInstansi();
   Future<Either<AppFailure, InstansiSuccess>> submit(InstansiForm form);
+  Future<Either<AppFailure, InstansiSuccess>> deleteInstansi(String instansiId);
 }

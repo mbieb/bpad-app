@@ -26,6 +26,7 @@ mixin _$EmployeeEvent {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -39,6 +40,7 @@ mixin _$EmployeeEvent {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +54,7 @@ mixin _$EmployeeEvent {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) =>
@@ -66,6 +69,7 @@ mixin _$EmployeeEvent {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +83,7 @@ mixin _$EmployeeEvent {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -92,6 +97,7 @@ mixin _$EmployeeEvent {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) =>
@@ -202,6 +208,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return started(data);
@@ -218,6 +225,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return started?.call(data);
@@ -234,6 +242,7 @@ class _$StartedImpl implements _Started {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -254,6 +263,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return started(this);
@@ -270,6 +280,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return started?.call(this);
@@ -286,6 +297,7 @@ class _$StartedImpl implements _Started {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -391,6 +403,7 @@ class _$GetDataImpl implements _GetData {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return getData(data);
@@ -407,6 +420,7 @@ class _$GetDataImpl implements _GetData {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return getData?.call(data);
@@ -423,6 +437,7 @@ class _$GetDataImpl implements _GetData {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -443,6 +458,7 @@ class _$GetDataImpl implements _GetData {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return getData(this);
@@ -459,6 +475,7 @@ class _$GetDataImpl implements _GetData {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return getData?.call(this);
@@ -475,6 +492,7 @@ class _$GetDataImpl implements _GetData {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -566,6 +584,7 @@ class _$NipChangedImpl implements _NipChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return nipChanged(nip);
@@ -582,6 +601,7 @@ class _$NipChangedImpl implements _NipChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return nipChanged?.call(nip);
@@ -598,6 +618,7 @@ class _$NipChangedImpl implements _NipChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -618,6 +639,7 @@ class _$NipChangedImpl implements _NipChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return nipChanged(this);
@@ -634,6 +656,7 @@ class _$NipChangedImpl implements _NipChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return nipChanged?.call(this);
@@ -650,6 +673,7 @@ class _$NipChangedImpl implements _NipChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -741,6 +765,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return nameChanged(name);
@@ -757,6 +782,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return nameChanged?.call(name);
@@ -773,6 +799,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -793,6 +820,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return nameChanged(this);
@@ -809,6 +837,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return nameChanged?.call(this);
@@ -825,6 +854,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -918,6 +948,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return positionChanged(position);
@@ -934,6 +965,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return positionChanged?.call(position);
@@ -950,6 +982,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -970,6 +1003,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return positionChanged(this);
@@ -986,6 +1020,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return positionChanged?.call(this);
@@ -1002,6 +1037,7 @@ class _$PositionChangedImpl implements _PositionChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1093,6 +1129,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return salaryChanged(salary);
@@ -1109,6 +1146,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return salaryChanged?.call(salary);
@@ -1125,6 +1163,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1145,6 +1184,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return salaryChanged(this);
@@ -1161,6 +1201,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return salaryChanged?.call(this);
@@ -1177,6 +1218,7 @@ class _$SalaryChangedImpl implements _SalaryChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1269,6 +1311,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return dateJoinedChanged(date);
@@ -1285,6 +1328,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return dateJoinedChanged?.call(date);
@@ -1301,6 +1345,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1321,6 +1366,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return dateJoinedChanged(this);
@@ -1337,6 +1383,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return dateJoinedChanged?.call(this);
@@ -1353,6 +1400,7 @@ class _$dateJoinChangedImpl implements _dateJoinChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1418,6 +1466,7 @@ class _$SubmitImpl implements _Submit {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return submit();
@@ -1434,6 +1483,7 @@ class _$SubmitImpl implements _Submit {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return submit?.call();
@@ -1450,6 +1500,7 @@ class _$SubmitImpl implements _Submit {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1470,6 +1521,7 @@ class _$SubmitImpl implements _Submit {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return submit(this);
@@ -1486,6 +1538,7 @@ class _$SubmitImpl implements _Submit {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return submit?.call(this);
@@ -1502,6 +1555,7 @@ class _$SubmitImpl implements _Submit {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1514,6 +1568,188 @@ class _$SubmitImpl implements _Submit {
 
 abstract class _Submit implements EmployeeEvent {
   const factory _Submit() = _$SubmitImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteEmployeeImplCopyWith<$Res> {
+  factory _$$DeleteEmployeeImplCopyWith(_$DeleteEmployeeImpl value,
+          $Res Function(_$DeleteEmployeeImpl) then) =
+      __$$DeleteEmployeeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String id});
+}
+
+/// @nodoc
+class __$$DeleteEmployeeImplCopyWithImpl<$Res>
+    extends _$EmployeeEventCopyWithImpl<$Res, _$DeleteEmployeeImpl>
+    implements _$$DeleteEmployeeImplCopyWith<$Res> {
+  __$$DeleteEmployeeImplCopyWithImpl(
+      _$DeleteEmployeeImpl _value, $Res Function(_$DeleteEmployeeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$DeleteEmployeeImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteEmployeeImpl implements _DeleteEmployee {
+  const _$DeleteEmployeeImpl(this.id);
+
+  @override
+  final String id;
+
+  @override
+  String toString() {
+    return 'EmployeeEvent.deleteEmployee(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteEmployeeImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteEmployeeImplCopyWith<_$DeleteEmployeeImpl> get copyWith =>
+      __$$DeleteEmployeeImplCopyWithImpl<_$DeleteEmployeeImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Employee? data) started,
+    required TResult Function(Employee? data) getData,
+    required TResult Function(String nip) nipChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String position) positionChanged,
+    required TResult Function(String salary) salaryChanged,
+    required TResult Function(DateTime date) dateJoinedChanged,
+    required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
+    required TResult Function(DropdownText instansi) instansiChanged,
+  }) {
+    return deleteEmployee(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Employee? data)? started,
+    TResult? Function(Employee? data)? getData,
+    TResult? Function(String nip)? nipChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String position)? positionChanged,
+    TResult? Function(String salary)? salaryChanged,
+    TResult? Function(DateTime date)? dateJoinedChanged,
+    TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
+    TResult? Function(DropdownText instansi)? instansiChanged,
+  }) {
+    return deleteEmployee?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Employee? data)? started,
+    TResult Function(Employee? data)? getData,
+    TResult Function(String nip)? nipChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String position)? positionChanged,
+    TResult Function(String salary)? salaryChanged,
+    TResult Function(DateTime date)? dateJoinedChanged,
+    TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
+    TResult Function(DropdownText instansi)? instansiChanged,
+    required TResult orElse(),
+  }) {
+    if (deleteEmployee != null) {
+      return deleteEmployee(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
+    required TResult Function(_NipChanged value) nipChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PositionChanged value) positionChanged,
+    required TResult Function(_SalaryChanged value) salaryChanged,
+    required TResult Function(_dateJoinChanged value) dateJoinedChanged,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
+    required TResult Function(_InstansiChanged value) instansiChanged,
+  }) {
+    return deleteEmployee(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
+    TResult? Function(_NipChanged value)? nipChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PositionChanged value)? positionChanged,
+    TResult? Function(_SalaryChanged value)? salaryChanged,
+    TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
+    TResult? Function(_InstansiChanged value)? instansiChanged,
+  }) {
+    return deleteEmployee?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
+    TResult Function(_NipChanged value)? nipChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PositionChanged value)? positionChanged,
+    TResult Function(_SalaryChanged value)? salaryChanged,
+    TResult Function(_dateJoinChanged value)? dateJoinedChanged,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
+    TResult Function(_InstansiChanged value)? instansiChanged,
+    required TResult orElse(),
+  }) {
+    if (deleteEmployee != null) {
+      return deleteEmployee(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteEmployee implements EmployeeEvent {
+  const factory _DeleteEmployee(final String id) = _$DeleteEmployeeImpl;
+
+  String get id;
+  @JsonKey(ignore: true)
+  _$$DeleteEmployeeImplCopyWith<_$DeleteEmployeeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1600,6 +1836,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     required TResult Function(String salary) salaryChanged,
     required TResult Function(DateTime date) dateJoinedChanged,
     required TResult Function() submit,
+    required TResult Function(String id) deleteEmployee,
     required TResult Function(DropdownText instansi) instansiChanged,
   }) {
     return instansiChanged(instansi);
@@ -1616,6 +1853,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     TResult? Function(String salary)? salaryChanged,
     TResult? Function(DateTime date)? dateJoinedChanged,
     TResult? Function()? submit,
+    TResult? Function(String id)? deleteEmployee,
     TResult? Function(DropdownText instansi)? instansiChanged,
   }) {
     return instansiChanged?.call(instansi);
@@ -1632,6 +1870,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     TResult Function(String salary)? salaryChanged,
     TResult Function(DateTime date)? dateJoinedChanged,
     TResult Function()? submit,
+    TResult Function(String id)? deleteEmployee,
     TResult Function(DropdownText instansi)? instansiChanged,
     required TResult orElse(),
   }) {
@@ -1652,6 +1891,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     required TResult Function(_SalaryChanged value) salaryChanged,
     required TResult Function(_dateJoinChanged value) dateJoinedChanged,
     required TResult Function(_Submit value) submit,
+    required TResult Function(_DeleteEmployee value) deleteEmployee,
     required TResult Function(_InstansiChanged value) instansiChanged,
   }) {
     return instansiChanged(this);
@@ -1668,6 +1908,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     TResult? Function(_SalaryChanged value)? salaryChanged,
     TResult? Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult? Function(_Submit value)? submit,
+    TResult? Function(_DeleteEmployee value)? deleteEmployee,
     TResult? Function(_InstansiChanged value)? instansiChanged,
   }) {
     return instansiChanged?.call(this);
@@ -1684,6 +1925,7 @@ class _$InstansiChangedImpl implements _InstansiChanged {
     TResult Function(_SalaryChanged value)? salaryChanged,
     TResult Function(_dateJoinChanged value)? dateJoinedChanged,
     TResult Function(_Submit value)? submit,
+    TResult Function(_DeleteEmployee value)? deleteEmployee,
     TResult Function(_InstansiChanged value)? instansiChanged,
     required TResult orElse(),
   }) {

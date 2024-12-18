@@ -21,9 +21,11 @@ import '../app/application/initial/initial_bloc.dart' as _i871;
 import '../app/application/instansi/instansi_bloc.dart' as _i746;
 import '../app/application/register/register_bloc.dart' as _i1033;
 import '../app/application/sign_in/sign_in_bloc.dart' as _i779;
+import '../app/application/vehicle/vehicle_bloc.dart' as _i252;
 import '../app/domain/auth/i_auth_repository.dart' as _i971;
 import '../app/domain/employee/i_employee_repository.dart' as _i871;
 import '../app/domain/instansi/i_instansi_repository.dart' as _i446;
+import '../app/domain/vehicle/i_vehicle_repository.dart' as _i906;
 import '../app/infrastructure/api_helper/api_helper.dart' as _i426;
 import '../app/infrastructure/auth/auth_local_data_source.dart' as _i266;
 import '../app/infrastructure/auth/auth_remote_data_source.dart' as _i607;
@@ -36,6 +38,8 @@ import '../app/infrastructure/instansi/instansi_remote_data_source.dart'
 import '../app/infrastructure/instansi/instansi_repository.dart' as _i369;
 import '../app/infrastructure/register_module/register_module.dart' as _i131;
 import '../app/infrastructure/storage/secure_storage.dart' as _i977;
+import '../app/infrastructure/vehicle/vehicle_remote_data_source.dart' as _i203;
+import '../app/infrastructure/vehicle/vehicle_repository.dart' as _i114;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 _i174.GetIt init(
@@ -51,6 +55,8 @@ _i174.GetIt init(
   final registerModule = _$RegisterModule();
   gh.factory<_i187.EmployeeRemoteDataSource>(
       () => _i187.EmployeeRemoteDataSource());
+  gh.factory<_i203.VehicleRemoteDataSource>(
+      () => _i203.VehicleRemoteDataSource());
   gh.factory<_i594.InstansiRemoteDataSource>(
       () => _i594.InstansiRemoteDataSource());
   gh.singleton<_i977.SecureStorage>(() => _i977.SecureStorage());
@@ -58,12 +64,16 @@ _i174.GetIt init(
   gh.lazySingleton<_i895.Connectivity>(() => registerModule.connectivity);
   gh.lazySingleton<_i974.Logger>(() => registerModule.logger);
   gh.lazySingleton<_i361.Dio>(() => registerModule.dio());
+  gh.lazySingleton<_i906.IVehicleRepository>(
+      () => _i114.VehicleRepository(gh<_i203.VehicleRemoteDataSource>()));
   gh.singleton<_i426.ApiHelper>(() => _i426.ApiHelper(
         gh<_i361.Dio>(),
         gh<_i895.Connectivity>(),
       ));
   gh.factory<_i266.AuthLocalDataSource>(
       () => _i266.AuthLocalDataSource(gh<_i977.SecureStorage>()));
+  gh.factory<_i252.VehicleBloc>(
+      () => _i252.VehicleBloc(gh<_i906.IVehicleRepository>()));
   gh.lazySingleton<_i871.IEmployeeRepository>(() => _i274.EmployeeRepository(
         gh<_i187.EmployeeRemoteDataSource>(),
         gh<_i594.InstansiRemoteDataSource>(),

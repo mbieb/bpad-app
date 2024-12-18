@@ -19,32 +19,38 @@ mixin _$EmployeeSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() success,
+    required TResult Function() successDelete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? success,
+    TResult? Function()? successDelete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? success,
+    TResult Function()? successDelete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Success value) success,
+    required TResult Function(_SuccessDelete value) successDelete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Success value)? success,
+    TResult? Function(_SuccessDelete value)? successDelete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Success value)? success,
+    TResult Function(_SuccessDelete value)? successDelete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() success,
+    required TResult Function() successDelete,
   }) {
     return success();
   }
@@ -115,6 +122,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? success,
+    TResult? Function()? successDelete,
   }) {
     return success?.call();
   }
@@ -123,6 +131,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? success,
+    TResult Function()? successDelete,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -135,6 +144,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Success value) success,
+    required TResult Function(_SuccessDelete value) successDelete,
   }) {
     return success(this);
   }
@@ -143,6 +153,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Success value)? success,
+    TResult? Function(_SuccessDelete value)? successDelete,
   }) {
     return success?.call(this);
   }
@@ -151,6 +162,7 @@ class _$SuccessImpl implements _Success {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Success value)? success,
+    TResult Function(_SuccessDelete value)? successDelete,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -162,4 +174,106 @@ class _$SuccessImpl implements _Success {
 
 abstract class _Success implements EmployeeSuccess {
   const factory _Success() = _$SuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessDeleteImplCopyWith<$Res> {
+  factory _$$SuccessDeleteImplCopyWith(
+          _$SuccessDeleteImpl value, $Res Function(_$SuccessDeleteImpl) then) =
+      __$$SuccessDeleteImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SuccessDeleteImplCopyWithImpl<$Res>
+    extends _$EmployeeSuccessCopyWithImpl<$Res, _$SuccessDeleteImpl>
+    implements _$$SuccessDeleteImplCopyWith<$Res> {
+  __$$SuccessDeleteImplCopyWithImpl(
+      _$SuccessDeleteImpl _value, $Res Function(_$SuccessDeleteImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessDeleteImpl implements _SuccessDelete {
+  const _$SuccessDeleteImpl();
+
+  @override
+  String toString() {
+    return 'EmployeeSuccess.successDelete()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessDeleteImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() success,
+    required TResult Function() successDelete,
+  }) {
+    return successDelete();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? success,
+    TResult? Function()? successDelete,
+  }) {
+    return successDelete?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? success,
+    TResult Function()? successDelete,
+    required TResult orElse(),
+  }) {
+    if (successDelete != null) {
+      return successDelete();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Success value) success,
+    required TResult Function(_SuccessDelete value) successDelete,
+  }) {
+    return successDelete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Success value)? success,
+    TResult? Function(_SuccessDelete value)? successDelete,
+  }) {
+    return successDelete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Success value)? success,
+    TResult Function(_SuccessDelete value)? successDelete,
+    required TResult orElse(),
+  }) {
+    if (successDelete != null) {
+      return successDelete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SuccessDelete implements EmployeeSuccess {
+  const factory _SuccessDelete() = _$SuccessDeleteImpl;
 }
