@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "370569659179",
+    "project_id": "bpad-app-8ba9d",
+    "storage_bucket": "bpad-app-8ba9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370569659179:android:c2cb590eb317a122937b6e",
+        "android_client_info": {
+          "package_name": "com.bpad.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjcFIjEXu5DG5ewg5_OSRD6QxulFpx9yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
