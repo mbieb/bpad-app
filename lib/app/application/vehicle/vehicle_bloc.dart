@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:bpad_app/app/domain/dropdown_text/dropdown_text.dart';
 import 'package:bpad_app/app/domain/failures/failures.dart';
 import 'package:bpad_app/app/domain/vehicle/i_vehicle_repository.dart';
 import 'package:bpad_app/app/domain/vehicle/vehicle.dart';
@@ -58,6 +59,32 @@ class VehicleBloc extends Bloc<VehicleEvent, VehicleState> {
           ));
         });
       },
+      getData: (event) async {
+        emit(state.loading);
+        final failureOrUser = await _vehicleRepository.getListEmployee();
+        final failureOrVehicle = await _vehicleRepository.getListVehicle();
+
+        List<Vehicle> listVehicle = [];
+        failureOrVehicle.fold((val) {}, (val) {
+          listVehicle = val;
+        });
+        failureOrUser.fold((val) {}, (val) {
+          List<DropdownText> listEmployee = [];
+          List<String> vehicleEmployeeId = [];
+          for (var e in listVehicle) {
+            vehicleEmployeeId.add(e.employeeId ?? '');
+          }
+          for (var e in val) {
+            if (!vehicleEmployeeId.contains(e.id)) {
+              listEmployee.add(e);
+            }
+          }
+
+          emit(state.unmodified.copyWith(
+            employeeListOption: some(listEmployee),
+          ));
+        });
+      },
       noChanged: (event) {
         emit(
           state.unmodified.copyWith.form(
@@ -83,6 +110,13 @@ class VehicleBloc extends Bloc<VehicleEvent, VehicleState> {
         emit(
           state.unmodified.copyWith.form(
             type: some(event.type),
+          ),
+        );
+      },
+      employeeChanged: (event) {
+        emit(
+          state.unmodified.copyWith.form(
+            employee: some(event.employee),
           ),
         );
       },

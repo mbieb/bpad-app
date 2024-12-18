@@ -64,14 +64,16 @@ _i174.GetIt init(
   gh.lazySingleton<_i895.Connectivity>(() => registerModule.connectivity);
   gh.lazySingleton<_i974.Logger>(() => registerModule.logger);
   gh.lazySingleton<_i361.Dio>(() => registerModule.dio());
-  gh.lazySingleton<_i906.IVehicleRepository>(
-      () => _i114.VehicleRepository(gh<_i203.VehicleRemoteDataSource>()));
   gh.singleton<_i426.ApiHelper>(() => _i426.ApiHelper(
         gh<_i361.Dio>(),
         gh<_i895.Connectivity>(),
       ));
   gh.factory<_i266.AuthLocalDataSource>(
       () => _i266.AuthLocalDataSource(gh<_i977.SecureStorage>()));
+  gh.lazySingleton<_i906.IVehicleRepository>(() => _i114.VehicleRepository(
+        gh<_i203.VehicleRemoteDataSource>(),
+        gh<_i187.EmployeeRemoteDataSource>(),
+      ));
   gh.factory<_i252.VehicleBloc>(
       () => _i252.VehicleBloc(gh<_i906.IVehicleRepository>()));
   gh.lazySingleton<_i871.IEmployeeRepository>(() => _i274.EmployeeRepository(

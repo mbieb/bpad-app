@@ -21,6 +21,8 @@ class VehicleRemoteDataSource {
         'kind': data['kind'],
         'brand': data['brand'],
         'type': data['type'],
+        'employeeId': data['employeeId'],
+        'employeeName': data['employeeName'],
       });
     }).toList();
 
@@ -34,8 +36,8 @@ class VehicleRemoteDataSource {
     final kind = form.kind.toNullable();
     final brand = form.brand.toNullable();
     final type = form.type.toNullable();
-    // final employeeId = form.employee.toNullable()?.id;
-    // final employeeName = form.employee.toNullable()?.text;
+    final employeeId = form.employee.toNullable()?.id;
+    final employeeName = form.employee.toNullable()?.text;
     // Reference to Firestore
     final collection = FirebaseFirestore.instance.collection('vehicle');
 
@@ -58,6 +60,8 @@ class VehicleRemoteDataSource {
       'kind': kind,
       'brand': brand,
       'type': type,
+      'employeeId': employeeId,
+      'employeeName': employeeName,
     });
   }
 }

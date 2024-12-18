@@ -8,6 +8,7 @@ class VehicleState with _$VehicleState {
     required bool isLoading,
     required VehicleForm form,
     required Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption,
+    required Option<List<DropdownText>> employeeListOption,
   }) = _VehicleState;
 
   factory VehicleState.init() => VehicleState(
@@ -15,6 +16,7 @@ class VehicleState with _$VehicleState {
         isLoading: false,
         form: VehicleForm.init(),
         failureOrSuccessOption: none(),
+        employeeListOption: none(),
       );
 
   VehicleState get unmodified => copyWith(
@@ -30,13 +32,13 @@ class VehicleState with _$VehicleState {
 
   bool get enableButton => form.isValid;
 
-  //  List<DropdownText> get instansiList => instansiListOption.fold(
-  //       () => [],
-  //       (list) => list,
-  //     );
+  List<DropdownText> get employeeList => employeeListOption.fold(
+        () => [],
+        (list) => list,
+      );
 
-  // DropdownText? get instansiFormValue => form.instansi.fold(
-  //       () => null,
-  //       (val) => val,
-  //     );
+  DropdownText? get employeeFormValue => form.employee.fold(
+        () => null,
+        (val) => val,
+      );
 }

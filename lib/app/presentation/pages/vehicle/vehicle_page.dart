@@ -142,13 +142,18 @@ class VehicleBodyPage extends StatelessWidget {
                                 style: cTextReg,
                               ),
                             ),
+                            // gapW12,
+                            // Expanded(
+                            //   child: Text(
+                            //     item.brand ?? '',
+                            //     style: cTextReg,
+                            //   ),
+                            // ),
                             gapW12,
                             Expanded(
-                              flex: 2,
                               child: Text(
-                                item.brand ?? '',
-                                style: cTextReg,
-                                overflow: TextOverflow.ellipsis,
+                                item.employeeName ?? '',
+                                style: cTextBold,
                               ),
                             ),
                             gapW12,

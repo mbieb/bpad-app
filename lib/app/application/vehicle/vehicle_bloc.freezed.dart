@@ -19,10 +19,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) =>
@@ -30,10 +32,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) =>
@@ -41,10 +45,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -53,10 +59,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) =>
@@ -64,10 +72,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) =>
@@ -75,10 +85,12 @@ mixin _$VehicleEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -143,10 +155,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -157,10 +171,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -171,10 +187,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -189,10 +207,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -203,10 +223,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -217,10 +239,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -234,6 +258,150 @@ class _$StartedImpl implements _Started {
 
 abstract class _Started implements VehicleEvent {
   const factory _Started() = _$StartedImpl;
+}
+
+/// @nodoc
+abstract class _$$GetDataImplCopyWith<$Res> {
+  factory _$$GetDataImplCopyWith(
+          _$GetDataImpl value, $Res Function(_$GetDataImpl) then) =
+      __$$GetDataImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetDataImplCopyWithImpl<$Res>
+    extends _$VehicleEventCopyWithImpl<$Res, _$GetDataImpl>
+    implements _$$GetDataImplCopyWith<$Res> {
+  __$$GetDataImplCopyWithImpl(
+      _$GetDataImpl _value, $Res Function(_$GetDataImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetDataImpl implements _GetData {
+  const _$GetDataImpl();
+
+  @override
+  String toString() {
+    return 'VehicleEvent.getData()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetDataImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getData,
+    required TResult Function(String no) noChanged,
+    required TResult Function(String kind) kindChanged,
+    required TResult Function(String brand) brandChanged,
+    required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
+    required TResult Function() submit,
+    required TResult Function(String id) deleteVehicle,
+  }) {
+    return getData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getData,
+    TResult? Function(String no)? noChanged,
+    TResult? Function(String kind)? kindChanged,
+    TResult? Function(String brand)? brandChanged,
+    TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
+    TResult? Function()? submit,
+    TResult? Function(String id)? deleteVehicle,
+  }) {
+    return getData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getData,
+    TResult Function(String no)? noChanged,
+    TResult Function(String kind)? kindChanged,
+    TResult Function(String brand)? brandChanged,
+    TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
+    TResult Function()? submit,
+    TResult Function(String id)? deleteVehicle,
+    required TResult orElse(),
+  }) {
+    if (getData != null) {
+      return getData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
+    required TResult Function(_NoChanged value) noChanged,
+    required TResult Function(_KindChanged value) kindChanged,
+    required TResult Function(_BrandChanged value) brandChanged,
+    required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_Delete value) deleteVehicle,
+  }) {
+    return getData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
+    TResult? Function(_NoChanged value)? noChanged,
+    TResult? Function(_KindChanged value)? kindChanged,
+    TResult? Function(_BrandChanged value)? brandChanged,
+    TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_Delete value)? deleteVehicle,
+  }) {
+    return getData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
+    TResult Function(_NoChanged value)? noChanged,
+    TResult Function(_KindChanged value)? kindChanged,
+    TResult Function(_BrandChanged value)? brandChanged,
+    TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_Delete value)? deleteVehicle,
+    required TResult orElse(),
+  }) {
+    if (getData != null) {
+      return getData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetData implements VehicleEvent {
+  const factory _GetData() = _$GetDataImpl;
 }
 
 /// @nodoc
@@ -301,10 +469,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -315,10 +485,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -329,10 +501,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -347,10 +521,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -361,10 +537,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -375,10 +553,12 @@ class _$NoChangedImpl implements _NoChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -464,10 +644,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -478,10 +660,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -492,10 +676,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -510,10 +696,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -524,10 +712,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -538,10 +728,12 @@ class _$KindChangedImpl implements _KindChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -627,10 +819,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -641,10 +835,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -655,10 +851,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -673,10 +871,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -687,10 +887,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -701,10 +903,12 @@ class _$BrandChangedImpl implements _BrandChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -790,10 +994,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -804,10 +1010,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -818,10 +1026,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -836,10 +1046,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -850,10 +1062,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -864,10 +1078,12 @@ class _$TypeChangedImpl implements _TypeChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -885,6 +1101,194 @@ abstract class _TypeChanged implements VehicleEvent {
   String get type;
   @JsonKey(ignore: true)
   _$$TypeChangedImplCopyWith<_$TypeChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EmployeeChangedImplCopyWith<$Res> {
+  factory _$$EmployeeChangedImplCopyWith(_$EmployeeChangedImpl value,
+          $Res Function(_$EmployeeChangedImpl) then) =
+      __$$EmployeeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DropdownText employee});
+
+  $DropdownTextCopyWith<$Res> get employee;
+}
+
+/// @nodoc
+class __$$EmployeeChangedImplCopyWithImpl<$Res>
+    extends _$VehicleEventCopyWithImpl<$Res, _$EmployeeChangedImpl>
+    implements _$$EmployeeChangedImplCopyWith<$Res> {
+  __$$EmployeeChangedImplCopyWithImpl(
+      _$EmployeeChangedImpl _value, $Res Function(_$EmployeeChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? employee = null,
+  }) {
+    return _then(_$EmployeeChangedImpl(
+      null == employee
+          ? _value.employee
+          : employee // ignore: cast_nullable_to_non_nullable
+              as DropdownText,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DropdownTextCopyWith<$Res> get employee {
+    return $DropdownTextCopyWith<$Res>(_value.employee, (value) {
+      return _then(_value.copyWith(employee: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$EmployeeChangedImpl implements _EmployeeChanged {
+  const _$EmployeeChangedImpl(this.employee);
+
+  @override
+  final DropdownText employee;
+
+  @override
+  String toString() {
+    return 'VehicleEvent.employeeChanged(employee: $employee)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EmployeeChangedImpl &&
+            (identical(other.employee, employee) ||
+                other.employee == employee));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, employee);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EmployeeChangedImplCopyWith<_$EmployeeChangedImpl> get copyWith =>
+      __$$EmployeeChangedImplCopyWithImpl<_$EmployeeChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getData,
+    required TResult Function(String no) noChanged,
+    required TResult Function(String kind) kindChanged,
+    required TResult Function(String brand) brandChanged,
+    required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
+    required TResult Function() submit,
+    required TResult Function(String id) deleteVehicle,
+  }) {
+    return employeeChanged(employee);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getData,
+    TResult? Function(String no)? noChanged,
+    TResult? Function(String kind)? kindChanged,
+    TResult? Function(String brand)? brandChanged,
+    TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
+    TResult? Function()? submit,
+    TResult? Function(String id)? deleteVehicle,
+  }) {
+    return employeeChanged?.call(employee);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getData,
+    TResult Function(String no)? noChanged,
+    TResult Function(String kind)? kindChanged,
+    TResult Function(String brand)? brandChanged,
+    TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
+    TResult Function()? submit,
+    TResult Function(String id)? deleteVehicle,
+    required TResult orElse(),
+  }) {
+    if (employeeChanged != null) {
+      return employeeChanged(employee);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
+    required TResult Function(_NoChanged value) noChanged,
+    required TResult Function(_KindChanged value) kindChanged,
+    required TResult Function(_BrandChanged value) brandChanged,
+    required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_Delete value) deleteVehicle,
+  }) {
+    return employeeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
+    TResult? Function(_NoChanged value)? noChanged,
+    TResult? Function(_KindChanged value)? kindChanged,
+    TResult? Function(_BrandChanged value)? brandChanged,
+    TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_Delete value)? deleteVehicle,
+  }) {
+    return employeeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
+    TResult Function(_NoChanged value)? noChanged,
+    TResult Function(_KindChanged value)? kindChanged,
+    TResult Function(_BrandChanged value)? brandChanged,
+    TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_Delete value)? deleteVehicle,
+    required TResult orElse(),
+  }) {
+    if (employeeChanged != null) {
+      return employeeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EmployeeChanged implements VehicleEvent {
+  const factory _EmployeeChanged(final DropdownText employee) =
+      _$EmployeeChangedImpl;
+
+  DropdownText get employee;
+  @JsonKey(ignore: true)
+  _$$EmployeeChangedImplCopyWith<_$EmployeeChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -927,10 +1331,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -941,10 +1347,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -955,10 +1363,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -973,10 +1383,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -987,10 +1399,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -1001,10 +1415,12 @@ class _$SubmitImpl implements _Submit {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -1085,10 +1501,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getData,
     required TResult Function(String no) noChanged,
     required TResult Function(String kind) kindChanged,
     required TResult Function(String brand) brandChanged,
     required TResult Function(String type) typeChanged,
+    required TResult Function(DropdownText employee) employeeChanged,
     required TResult Function() submit,
     required TResult Function(String id) deleteVehicle,
   }) {
@@ -1099,10 +1517,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? getData,
     TResult? Function(String no)? noChanged,
     TResult? Function(String kind)? kindChanged,
     TResult? Function(String brand)? brandChanged,
     TResult? Function(String type)? typeChanged,
+    TResult? Function(DropdownText employee)? employeeChanged,
     TResult? Function()? submit,
     TResult? Function(String id)? deleteVehicle,
   }) {
@@ -1113,10 +1533,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getData,
     TResult Function(String no)? noChanged,
     TResult Function(String kind)? kindChanged,
     TResult Function(String brand)? brandChanged,
     TResult Function(String type)? typeChanged,
+    TResult Function(DropdownText employee)? employeeChanged,
     TResult Function()? submit,
     TResult Function(String id)? deleteVehicle,
     required TResult orElse(),
@@ -1131,10 +1553,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetData value) getData,
     required TResult Function(_NoChanged value) noChanged,
     required TResult Function(_KindChanged value) kindChanged,
     required TResult Function(_BrandChanged value) brandChanged,
     required TResult Function(_TypeChanged value) typeChanged,
+    required TResult Function(_EmployeeChanged value) employeeChanged,
     required TResult Function(_Submit value) submit,
     required TResult Function(_Delete value) deleteVehicle,
   }) {
@@ -1145,10 +1569,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_GetData value)? getData,
     TResult? Function(_NoChanged value)? noChanged,
     TResult? Function(_KindChanged value)? kindChanged,
     TResult? Function(_BrandChanged value)? brandChanged,
     TResult? Function(_TypeChanged value)? typeChanged,
+    TResult? Function(_EmployeeChanged value)? employeeChanged,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_Delete value)? deleteVehicle,
   }) {
@@ -1159,10 +1585,12 @@ class _$DeleteImpl implements _Delete {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetData value)? getData,
     TResult Function(_NoChanged value)? noChanged,
     TResult Function(_KindChanged value)? kindChanged,
     TResult Function(_BrandChanged value)? brandChanged,
     TResult Function(_TypeChanged value)? typeChanged,
+    TResult Function(_EmployeeChanged value)? employeeChanged,
     TResult Function(_Submit value)? submit,
     TResult Function(_Delete value)? deleteVehicle,
     required TResult orElse(),
@@ -1191,6 +1619,8 @@ mixin _$VehicleState {
   VehicleForm get form => throw _privateConstructorUsedError;
   Option<Either<AppFailure, VehicleSuccess>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
+  Option<List<DropdownText>> get employeeListOption =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $VehicleStateCopyWith<VehicleState> get copyWith =>
@@ -1207,7 +1637,8 @@ abstract class $VehicleStateCopyWith<$Res> {
       {Option<List<Vehicle>> vehicleListOption,
       bool isLoading,
       VehicleForm form,
-      Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption});
+      Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption,
+      Option<List<DropdownText>> employeeListOption});
 
   $VehicleFormCopyWith<$Res> get form;
 }
@@ -1229,6 +1660,7 @@ class _$VehicleStateCopyWithImpl<$Res, $Val extends VehicleState>
     Object? isLoading = null,
     Object? form = null,
     Object? failureOrSuccessOption = null,
+    Object? employeeListOption = null,
   }) {
     return _then(_value.copyWith(
       vehicleListOption: null == vehicleListOption
@@ -1247,6 +1679,10 @@ class _$VehicleStateCopyWithImpl<$Res, $Val extends VehicleState>
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AppFailure, VehicleSuccess>>,
+      employeeListOption: null == employeeListOption
+          ? _value.employeeListOption
+          : employeeListOption // ignore: cast_nullable_to_non_nullable
+              as Option<List<DropdownText>>,
     ) as $Val);
   }
 
@@ -1271,7 +1707,8 @@ abstract class _$$VehicleStateImplCopyWith<$Res>
       {Option<List<Vehicle>> vehicleListOption,
       bool isLoading,
       VehicleForm form,
-      Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption});
+      Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption,
+      Option<List<DropdownText>> employeeListOption});
 
   @override
   $VehicleFormCopyWith<$Res> get form;
@@ -1292,6 +1729,7 @@ class __$$VehicleStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? form = null,
     Object? failureOrSuccessOption = null,
+    Object? employeeListOption = null,
   }) {
     return _then(_$VehicleStateImpl(
       vehicleListOption: null == vehicleListOption
@@ -1310,6 +1748,10 @@ class __$$VehicleStateImplCopyWithImpl<$Res>
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AppFailure, VehicleSuccess>>,
+      employeeListOption: null == employeeListOption
+          ? _value.employeeListOption
+          : employeeListOption // ignore: cast_nullable_to_non_nullable
+              as Option<List<DropdownText>>,
     ));
   }
 }
@@ -1321,7 +1763,8 @@ class _$VehicleStateImpl extends _VehicleState {
       {required this.vehicleListOption,
       required this.isLoading,
       required this.form,
-      required this.failureOrSuccessOption})
+      required this.failureOrSuccessOption,
+      required this.employeeListOption})
       : super._();
 
   @override
@@ -1332,10 +1775,12 @@ class _$VehicleStateImpl extends _VehicleState {
   final VehicleForm form;
   @override
   final Option<Either<AppFailure, VehicleSuccess>> failureOrSuccessOption;
+  @override
+  final Option<List<DropdownText>> employeeListOption;
 
   @override
   String toString() {
-    return 'VehicleState(vehicleListOption: $vehicleListOption, isLoading: $isLoading, form: $form, failureOrSuccessOption: $failureOrSuccessOption)';
+    return 'VehicleState(vehicleListOption: $vehicleListOption, isLoading: $isLoading, form: $form, failureOrSuccessOption: $failureOrSuccessOption, employeeListOption: $employeeListOption)';
   }
 
   @override
@@ -1349,12 +1794,14 @@ class _$VehicleStateImpl extends _VehicleState {
                 other.isLoading == isLoading) &&
             (identical(other.form, form) || other.form == form) &&
             (identical(other.failureOrSuccessOption, failureOrSuccessOption) ||
-                other.failureOrSuccessOption == failureOrSuccessOption));
+                other.failureOrSuccessOption == failureOrSuccessOption) &&
+            (identical(other.employeeListOption, employeeListOption) ||
+                other.employeeListOption == employeeListOption));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, vehicleListOption, isLoading, form, failureOrSuccessOption);
+  int get hashCode => Object.hash(runtimeType, vehicleListOption, isLoading,
+      form, failureOrSuccessOption, employeeListOption);
 
   @JsonKey(ignore: true)
   @override
@@ -1365,11 +1812,13 @@ class _$VehicleStateImpl extends _VehicleState {
 
 abstract class _VehicleState extends VehicleState {
   const factory _VehicleState(
-      {required final Option<List<Vehicle>> vehicleListOption,
-      required final bool isLoading,
-      required final VehicleForm form,
-      required final Option<Either<AppFailure, VehicleSuccess>>
-          failureOrSuccessOption}) = _$VehicleStateImpl;
+          {required final Option<List<Vehicle>> vehicleListOption,
+          required final bool isLoading,
+          required final VehicleForm form,
+          required final Option<Either<AppFailure, VehicleSuccess>>
+              failureOrSuccessOption,
+          required final Option<List<DropdownText>> employeeListOption}) =
+      _$VehicleStateImpl;
   const _VehicleState._() : super._();
 
   @override
@@ -1380,6 +1829,8 @@ abstract class _VehicleState extends VehicleState {
   VehicleForm get form;
   @override
   Option<Either<AppFailure, VehicleSuccess>> get failureOrSuccessOption;
+  @override
+  Option<List<DropdownText>> get employeeListOption;
   @override
   @JsonKey(ignore: true)
   _$$VehicleStateImplCopyWith<_$VehicleStateImpl> get copyWith =>

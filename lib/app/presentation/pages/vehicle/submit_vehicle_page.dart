@@ -1,4 +1,3 @@
-import 'package:bpad_app/app/application/employee/employee_bloc.dart';
 import 'package:bpad_app/app/application/vehicle/vehicle_bloc.dart';
 import 'package:bpad_app/app/presentation/constants/dimens.dart';
 import 'package:bpad_app/app/presentation/constants/text_style.dart';
@@ -26,7 +25,7 @@ class SubmitVehiclePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<VehicleBloc>(),
+      create: (context) => getIt<VehicleBloc>()..add(const VehicleEvent.getData()),
       child: SubmitVehicleBodyPage(
         id: id,
       ),
@@ -139,6 +138,16 @@ class SubmitVehicleBodyPage extends StatelessWidget {
                 inputFormatters: [
                   FilteringTextInputFormatter.singleLineFormatter,
                 ],
+              ),
+              PrimaryDropdownField(
+                hintText: 'Penanggung Jawab',
+                icon: const Icon(
+                  Icons.account_balance_outlined,
+                  size: 22,
+                ),
+                value: state.employeeFormValue,
+                items: state.employeeList,
+                onChanged: (val) => bloc.add(VehicleEvent.employeeChanged(val!)),
               ),
               // PrimaryTextField(
               //   onChanged: (val) => bloc.add(VehicleEvent.salaryChanged(val)),
