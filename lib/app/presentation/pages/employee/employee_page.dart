@@ -120,6 +120,36 @@ class EmployeeBodyPage extends StatelessWidget {
                 ],
               ),
               gapH16,
+              Container(
+                padding: padding(all: 8),
+                color: Colors.grey[400],
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Nama',
+                      style: cTextBold,
+                    ),
+                    gapW16,
+                    Expanded(
+                      child: Text(
+                        'NIP',
+                        style: cTextBold,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        'Instansi',
+                        style: cTextBold,
+                      ),
+                    ),
+                    Container(),
+                    Container(),
+                  ],
+                ),
+              ),
+              gapH8,
               ListView.builder(
                 primary: false,
                 shrinkWrap: true,

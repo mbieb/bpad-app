@@ -67,6 +67,21 @@ class InstansiBodyPage extends StatelessWidget {
                 ],
               ),
               gapH16,
+              Container(
+                padding: padding(all: 8),
+                color: Colors.grey[400],
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Instansi',
+                        style: cTextBold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              gapH8,
               ListView.builder(
                 primary: false,
                 shrinkWrap: true,

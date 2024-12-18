@@ -118,6 +118,37 @@ class VehicleBodyPage extends StatelessWidget {
                 ],
               ),
               gapH16,
+              Container(
+                padding: padding(all: 8),
+                color: Colors.grey[400],
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'No Pol',
+                      style: cTextBold,
+                    ),
+                    gapW16,
+                    Expanded(
+                      child: Text(
+                        'Tipe',
+                        style: cTextBold,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        'Penanggung Jawab',
+                        style: cTextBold,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(),
+                    )
+                  ],
+                ),
+              ),
+              gapH8,
               ListView.builder(
                 primary: false,
                 shrinkWrap: true,
