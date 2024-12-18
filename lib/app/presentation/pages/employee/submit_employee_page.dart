@@ -1,4 +1,5 @@
 import 'package:bpad_app/app/application/employee/employee_bloc.dart';
+import 'package:bpad_app/app/domain/employee/employee_form/employee_form.dart';
 import 'package:bpad_app/app/presentation/constants/dimens.dart';
 import 'package:bpad_app/app/presentation/constants/text_style.dart';
 import 'package:bpad_app/app/presentation/helpers/failure_helper.dart';
@@ -15,9 +16,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class SubmitEmployeePage extends StatelessWidget {
-  final int? id;
+  final EmployeeForm? form;
   const SubmitEmployeePage({
-    this.id,
+    this.form,
     super.key,
   });
 
@@ -26,16 +27,16 @@ class SubmitEmployeePage extends StatelessWidget {
     return BlocProvider(
       create: (context) => getIt<EmployeeBloc>()..add(const EmployeeEvent.getData()),
       child: _SubmitEmployeeBodyPage(
-        id: id,
+        form: form,
       ),
     );
   }
 }
 
 class _SubmitEmployeeBodyPage extends StatelessWidget {
-  final int? id;
+  final EmployeeForm? form;
   const _SubmitEmployeeBodyPage({
-    this.id,
+    this.form,
     super.key,
   });
 
@@ -94,7 +95,7 @@ class _SubmitEmployeeBodyPage extends StatelessWidget {
               ),
             ),
             title: Text(
-              id == null ? 'Add Data ASN' : 'Edit Data ASN',
+              form == null ? 'Add Data ASN' : 'Edit Data ASN',
               style: cTextBoldXL,
             ),
           ),

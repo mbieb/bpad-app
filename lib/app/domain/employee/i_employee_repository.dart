@@ -8,6 +8,7 @@ import 'package:bpad_app/app/domain/failures/failures.dart';
 abstract class IEmployeeRepository {
   Future<Either<AppFailure, List<Employee>>> getEmployees();
   Future<Either<AppFailure, EmployeeSuccess>> submit(EmployeeForm form);
+  Future<Either<AppFailure, EmployeeSuccess>> editEmployee(EmployeeForm form);
   Future<Either<AppFailure, List<DropdownText>>> getListInstansi();
   Future<Either<AppFailure, EmployeeSuccess>> deleteEmployee(String id);
 }

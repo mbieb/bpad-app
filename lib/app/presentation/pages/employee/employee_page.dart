@@ -184,9 +184,17 @@ class EmployeeBodyPage extends StatelessWidget {
                               ),
                             ),
                             gapW12,
-                            const Icon(
-                              Icons.edit,
-                              color: Colors.blue,
+                            GestureDetector(
+                              onTap: () {
+                                // context.push(
+                                //   AppRouter.submitEmployee,
+                                //   extra: item,
+                                // );
+                              },
+                              child: const Icon(
+                                Icons.edit,
+                                color: Colors.blue,
+                              ),
                             ),
                             gapW12,
                             GestureDetector(

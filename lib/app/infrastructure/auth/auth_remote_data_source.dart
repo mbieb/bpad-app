@@ -104,9 +104,9 @@ class AuthRemoteDataSource {
     required ProfileForm form,
     required String userId,
   }) async {
-    final ref = FirebaseStorage.instance.ref().child('user_image').child(
-          '$userId.jpg',
-        );
+    // final ref = FirebaseStorage.instance.ref().child('user_image').child(
+    //       '$userId.jpg',
+    //     );
 
     final fullName = form.fullName.value;
     final gender = form.gender.toNullable()!.text;
@@ -125,21 +125,21 @@ class AuthRemoteDataSource {
       'provinceId': provinceId,
     });
 
-    String? imageUrl;
-    if (!form.imageUrlValue.contains('firebasestorage')) {
-      //upload image to firebase storage
-      await ref.putFile(File(form.imageUrlValue));
-      imageUrl = await ref.getDownloadURL();
-      await FirebaseFirestore.instance.collection('users').doc(userId).update({
-        'imageUrl': imageUrl,
-      });
-    }
+    // String? imageUrl;
+    // if (!form.imageUrlValue.contains('firebasestorage')) {
+    //   //upload image to firebase storage
+    //   await ref.putFile(File(form.imageUrlValue));
+    //   imageUrl = await ref.getDownloadURL();
+    //   await FirebaseFirestore.instance.collection('users').doc(userId).update({
+    //     'imageUrl': imageUrl,
+    //   });
+    // }
 
     return UserDto(
       id: userId,
       name: fullName,
       email: form.email.value,
-      imgUrl: imageUrl ?? form.imageUrlValue,
+      // imgUrl: imageUrl ?? form.imageUrlValue,
       gender: gender,
       genderId: genderId,
       birthDate: birthDate,

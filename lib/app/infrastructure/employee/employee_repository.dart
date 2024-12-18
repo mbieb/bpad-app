@@ -66,4 +66,10 @@ class EmployeeRepository implements IEmployeeRepository {
       return left(dynamicErrorToFailure(e, stack));
     }
   }
+
+  @override
+  Future<Either<AppFailure, EmployeeSuccess>> editEmployee(EmployeeForm form) async {
+    // TODO: implement editEmployee
+    throw UnimplementedError();
+  }
 }

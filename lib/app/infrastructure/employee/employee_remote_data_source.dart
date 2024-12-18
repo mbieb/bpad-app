@@ -72,4 +72,27 @@ class EmployeeRemoteDataSource {
 
     await collection.delete();
   }
+
+  Future updateEmployee({
+    required EmployeeForm form,
+  }) async {
+    final name = form.name.toNullable();
+    final position = form.position.toNullable();
+    final nip = form.nip.toNullable();
+    final joinDate = form.joinDate.toNullable();
+    final instansiId = form.instansi.toNullable()?.id;
+    final instansiName = form.instansi.toNullable()?.text;
+    final collection = FirebaseFirestore.instance.collection('employees');
+
+    final docRef = collection.doc();
+
+    await docRef.update({
+      'name': name,
+      'position': position,
+      'nip': nip,
+      'instansiId': instansiId,
+      'instansiName': instansiName,
+      'joinDate': joinDate,
+    });
+  }
 }
